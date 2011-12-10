@@ -382,7 +382,7 @@ module CollectiveIdea #:nodoc:
         protected
 
           def without_self(scope)
-            scope.where(["#{self.class.quoted_table_name}.#{self.class.primary_key} != ?", self])
+            scope.where(["#{self.class.quoted_table_name}.#{self.class.primary_key} != ?", id])
           end
 
           # All nested set queries should use this nested_set_scope, which performs finds on
